@@ -57,3 +57,10 @@ export const ToggleIcon = styled(FiRefreshCcw)`
         transform: scale(1.05);
     }
 `
+
+export const LoaderContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;
+`

@@ -5,12 +5,16 @@ import {
     QuotesText,
     QuotesAuthor,
     IconWrapper,
-    ToggleIcon
+    ToggleIcon,
+    LoaderContainer
 } from './QuotesElements'
+import FadeLoader from "react-spinners/FadeLoader"
+
 
 const Quotes = () => {
     const [quotes, setQuotes] = useState([])
     const [change, setChange] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const toggle = () => {
         setChange(!change)
@@ -31,28 +35,37 @@ const Quotes = () => {
                             })
                     }
                 })
+                setLoading(false)
         }
 
         getQuote()
         setQuotes([])
+        setLoading(true)
     }, [change])
+
 
     return (
         <QuotesContainer id='quotes'>
             <IconWrapper>
                 <ToggleIcon onClick={toggle}/>
             </IconWrapper>
-            {quotes.map((quote, i) => (
-                <QuotesItem key={i}>
-                    <QuotesText>
-                        {quote.text}
-                    </QuotesText>
-                    <QuotesAuthor>
-                        ~{quote.author}
-                    </QuotesAuthor>
-            
-                </QuotesItem>
-            ))}
+            {
+                loading ?
+                    <LoaderContainer>
+                        <FadeLoader color={'#ffaf17'} loading={loading} />
+                    </LoaderContainer>        
+                :
+                    quotes.map((quote, i) => (
+                        <QuotesItem key={i}>
+                            <QuotesText>
+                                {quote.text}
+                            </QuotesText>
+                            <QuotesAuthor>
+                                ~{quote.author}
+                            </QuotesAuthor>
+                    
+                        </QuotesItem>
+                    ))}
         </QuotesContainer>
     )
 }
