@@ -8,7 +8,7 @@ import Quotes from './components/Quotes'
 import VideoHero from './components/VideoHero'
 import Dropdown from './components/Dropdown'
 import Footer from './components/Footer'
-import BounceLoader from "react-spinners/BounceLoader"
+import PuffLoader from "react-spinners/PuffLoader"
 
 
 function App() {
@@ -31,7 +31,7 @@ function App() {
     {
       loading ?
       <div className="loader">
-        <BounceLoader color={'#ffaf17'} loading={loading} size={100} />
+        <PuffLoader color={'#ffaf17'} loading={loading} size={200} />
       </div>
       :
       <>  
