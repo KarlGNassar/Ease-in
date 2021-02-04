@@ -25,7 +25,7 @@ const HeroVideo = () => {
                     style={{maxWidth: '160px'}}
                     smooth={true}
                     duration={1000}
-                    offset={-60}
+                    offset={-55}
                 >
                     Get Started
                     <Arrow />

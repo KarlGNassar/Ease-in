@@ -34,7 +34,7 @@ const Navbar = ({ toggle }) => {
                     <NavMenuLinks 
                         to={item.to} 
                         key={i} 
-                        smooth={true} duration={1000} spy={true} exact='true' offset={-60}
+                        smooth={true} duration={1000} spy={true} exact='true' offset={-55}
                         scrollNav={scrollNav} 
                     >
                         {item.title}
