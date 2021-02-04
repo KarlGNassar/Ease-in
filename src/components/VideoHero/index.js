@@ -14,7 +14,7 @@ const HeroVideo = () => {
     return (
         <VideoContainer id='home'>
             <HeroBg>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+                <VideoBg autoPlay loop muted src={Video} type='video/mp4' preload />
             </HeroBg>
             <HeroContent>
                 <HeroH1>
@@ -25,7 +25,7 @@ const HeroVideo = () => {
                     style={{maxWidth: '160px'}}
                     smooth={true}
                     duration={1000}
-                    offset={-60}
+                    offset={-55}
                 >
                     Get Started
                     <Arrow />
