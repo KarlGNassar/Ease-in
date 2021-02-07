@@ -24,10 +24,15 @@ export const FooterLinksContainer = styled.div`
 `
 
 export const FooterLinksWrapper = styled.div`
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 
-    @media screen and (max-width: 820px) {
-        flex-direction: column;
+    @media screen and (max-width: 800px) {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    @media screen and (max-width: 600px) {
+        grid-template-columns: 1fr 1fr;
     }
 `
 
