@@ -1,4 +1,4 @@
-<h1 align="center">Covid-19 Tracker</h1>
+<h1 align="center">Ease-In</h1>
 
 <div align="center">
   <h3>
